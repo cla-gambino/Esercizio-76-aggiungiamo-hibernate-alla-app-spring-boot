@@ -15,8 +15,8 @@ import java.util.List;
 public class Students {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long studentId;
 
     @Column(nullable = false)
     private String lastName;
@@ -27,6 +27,6 @@ public class Students {
     @Column(unique = true, name = "userEmail", length = 100, nullable = false)
     private String email;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "students")
-    private List<Enrollments> enrollmentsList;
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "students")
+//    private List<Enrollments> enrollmentsList;
 }

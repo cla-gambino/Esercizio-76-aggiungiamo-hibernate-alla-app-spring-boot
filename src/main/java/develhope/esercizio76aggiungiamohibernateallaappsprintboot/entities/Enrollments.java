@@ -2,6 +2,7 @@ package develhope.esercizio76aggiungiamohibernateallaappsprintboot.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.util.List;
 
 
@@ -11,13 +12,15 @@ import java.util.List;
 public class Enrollments {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(nullable = false)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "studentId", nullable = false)
+    //@JoinColumn(nullable = false)
     private Students students;
 
-    @ManyToMany
-    private List<Classes> classes;
+    @OneToOne
+    @JoinColumn(name = "classId")
+    private Classes classes;
 }

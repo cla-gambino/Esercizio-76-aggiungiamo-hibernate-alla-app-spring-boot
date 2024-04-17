@@ -2,11 +2,12 @@ spring:
     datasource:
         url: jdbc:mysql://127.0.0.1:3306/devdb
         username: root
+        password: claudio
         driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
         database: mysql
         show_sql: true
         hibernate:
-            ddl-auto: create
+            ddl-auto: create-drop
     application:
         name: esercizio-76-aggiungiamo-hibernate-alla-app-sprint-boot
