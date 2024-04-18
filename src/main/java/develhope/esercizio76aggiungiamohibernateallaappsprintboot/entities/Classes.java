@@ -16,10 +16,10 @@ public class Classes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long classId;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "title")
     private String title;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "description")
     private String description;
 
 }

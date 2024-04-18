@@ -18,10 +18,10 @@ public class Students {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long studentId;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "lastName")
     private String lastName;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "firstName")
     private String firstName;
 
     @Column(unique = true, name = "userEmail", length = 100, nullable = false)
